@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import { useAuth } from "../AuthContext";
+import { Form } from "react-router-dom";
 
 
 
-const signUp = () => {
+const SignUp = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const { signUp } = useAuth();
+    // const { sign_up } = useAuth();
   
     const handleSignUp = async (e) => {
       e.preventDefault();
-      const { error } = await signUp(email, password);
+      const { error } = await sign_up(email, password);
       if (error) {
         alert(error.message);
       } else {
@@ -24,23 +25,24 @@ const signUp = () => {
                 <label>
                     Email:
                     <input 
-                    type="email"
-                    placeholder="Email"
+                    type="email.."
+                    placeholder="Email.."
                     value={email}
                     onChange={(e) => setEmail(e.target.value)} 
-                    className="signUp"/>
+                    className="sign-up"/>
                 </label>
                 <label>
                     Password:
                     <input 
                     type="password" 
-                    placeholder="Password"
+                    placeholder="Password.."
                     value={password}
                     onChange={(e) => setPassword(e.target.value)} 
-                    className="signUp"/>
+                    className="sign-up"/>
                 </label>
+                <button type="submit">Sign Up</button>
             </Form>
         </div>
     )
 }
-export default signUp
+export default SignUp
