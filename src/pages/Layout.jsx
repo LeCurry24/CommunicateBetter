@@ -13,6 +13,8 @@ const new_style = {
     justifyContent: 'space-evenly'
 }
 
+
+
 const Layout = () => {
     return(
         <div style={styles}>

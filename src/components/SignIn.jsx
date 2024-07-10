@@ -2,10 +2,12 @@ import { Form } from "react-router-dom";
 
 
 
+
+
 const sign_in = () =>{
     return (
         <div>
-            <Form>
+            <Form state={style_signin}>
                 <label>
                     Email:
                     <input type="email"

@@ -4,4 +4,10 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  
+};
+
+body {
+  background-image: url(./Screenshot\ 2024-07-09\ at\ 9.17.21\ PM.png)
+  
 };
