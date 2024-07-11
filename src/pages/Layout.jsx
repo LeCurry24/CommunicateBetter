@@ -4,8 +4,8 @@ const styles = {
     boxShadow: '0 0 15px black',
     backgroundColor: 'rgba(0, 0, 0, 0.8)', 
     borderRadius: '15px',
-    width: '1000px',
-    height: '600px' 
+    width: '85%',
+    height: '90%' 
 }
 
 const new_style = {

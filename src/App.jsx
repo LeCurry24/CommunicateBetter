@@ -11,6 +11,7 @@ import RoadList from "./users/RoadList";
 import Contractors from "./users/Contractors"
 import ConProfile from "./users/ConProfile"
 import ConRoadList from "./users/ConRoadList"
+import { AuthProvider } from "./components/AuthContext";
 
 
 
@@ -64,7 +65,9 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return <AuthProvider>
+      <RouterProvider router={router}></RouterProvider>
+  </AuthProvider>
 }
 
 export default App

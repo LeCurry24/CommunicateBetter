@@ -13,7 +13,7 @@ const sign_out = () => {
       if (error) {
         alert(error.message);
       } else {
-        navigate("/signin");
+        navigate("/sign_in");
       }
     };
 

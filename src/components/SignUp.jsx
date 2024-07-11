@@ -11,6 +11,7 @@ const SignUp = () => {
   
     const handleSignUp = async (e) => {
       e.preventDefault();
+      console.log(email, password)
       const { error } = await sign_up(email, password);
       if (error) {
         alert(error.message);

@@ -27,7 +27,7 @@ export const AuthProvider = ({ children }) => {
         };
     }, []);
 
-    const signUp = (email, password) => {
+    const sign_up = (email, password) => {
         return supabase.auth.signUp ({email, password});
     };
 
@@ -40,7 +40,7 @@ export const AuthProvider = ({ children }) => {
     };
 
     return(
-        <AuthContext.Provider value={{ session, signUp, signIn, signOut }}>
+        <AuthContext.Provider value={{ session, sign_up, signIn, signOut }}>
             {children}
         </AuthContext.Provider>
     );
