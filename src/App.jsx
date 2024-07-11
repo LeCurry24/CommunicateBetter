@@ -8,6 +8,9 @@ import Layout from "./pages/Layout";
 import RoadMaster from "./users/RoadMaster";
 import Profile from "./users/Profile";
 import RoadList from "./users/RoadList";
+import Contractors from "./users/Contractors"
+import ConProfile from "./users/ConProfile"
+import ConRoadList from "./users/ConRoadList"
 
 
 
@@ -43,6 +46,18 @@ const router = createBrowserRouter([
       {
         path: "/road_list",
         element: <RoadList/>
+      },
+      {
+        path: "/contractor",
+        element: <Contractors/>
+      },
+      {
+        path: "/con_profile",
+        element: <ConProfile/>
+      },
+      {
+        path: "/con_road_list",
+        element: <ConRoadList/>
       }
     ]
   }

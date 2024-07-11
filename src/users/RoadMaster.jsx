@@ -18,9 +18,9 @@ const road_master = () => {
             <h2>Road Master</h2>
             </div>
             <div style={link_style}>
-                <Link>Map</Link>
-                <Link to="/road_list">Road List</Link>
-                <Link to="/profile">Profile</Link>
+                <Link><button>Map</button></Link>
+                <Link to="/road_list"><button>Road List</button></Link>
+                <Link to="/profile"><button>Profile</button></Link>
 
             </div>
         </div>
