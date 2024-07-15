@@ -8,9 +8,11 @@ import Layout from "./pages/Layout";
 import RoadMaster from "./users/RoadMaster";
 import Profile from "./users/Profile";
 import RoadList from "./users/RoadList";
+import AddRoad from "./users/AddRoad"
 import Contractors from "./users/Contractors"
 import ConProfile from "./users/ConProfile"
 import ConRoadList from "./users/ConRoadList"
+import ConAddRoad from "./users/ConAddRoad"
 import { AuthProvider } from "./components/AuthContext";
 
 
@@ -49,6 +51,10 @@ const router = createBrowserRouter([
         element: <RoadList/>
       },
       {
+        path: "/add_road",
+        element: <AddRoad/>
+      },
+      {
         path: "/contractor",
         element: <Contractors/>
       },
@@ -59,6 +65,10 @@ const router = createBrowserRouter([
       {
         path: "/con_road_list",
         element: <ConRoadList/>
+      },
+      {
+        path: "/con_add_road",
+        element: <ConAddRoad/>
       }
     ]
   }

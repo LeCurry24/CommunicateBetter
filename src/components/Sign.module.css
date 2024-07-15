@@ -1,0 +1,116 @@
+.div{
+    /* border: 5px solid white; */
+    /* background-color: rgba(255, 255, 255, 0.758); */
+    /* opacity: 60%; */
+    /* width: 60%;
+    height: 60%; */
+    border-radius: 10%;
+    display: flex;
+    
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: space-between;
+   
+}
+
+.alreadyHaveAccount{
+    margin-right: 220px;
+}
+
+.labelText{
+    font-size: 150%;
+}
+
+
+label{
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.heading{
+    color: white;
+    font-weight: 500;
+    font-size: 40px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+   
+}
+
+
+.loginContain{
+    margin-left: 180px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 24px 24px;
+    gap: 16px;
+    text-align: center;
+}
+
+
+.sign {
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    padding: 1em;
+    background-color: #ffffff;
+    box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
+    transition: 300ms ease-in-out;
+  }
+  
+  .sign:focus {
+    background-color: white;
+    transform: scale(1.05);
+    box-shadow: 13px 13px 100px #ffffff,
+               -13px -13px 100px #b2b2b2;
+  }
+
+.button {
+    font-size: 18px;
+    color: white;
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+  }
+  
+  .button:focus,
+  .button:hover {
+    color: white;
+  }
+  
+  .button:focus:after,
+  .button:hover:after {
+    width: 100%;
+    left: 0%;
+  }
+  
+  .button:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+  }
+
+
+

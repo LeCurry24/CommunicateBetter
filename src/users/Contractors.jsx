@@ -1,28 +1,22 @@
 import { Link } from "react-router-dom";
+import styles from "./BtnAndProfile.module.css"
 
 
-const link_style = {
-    display: 'flex',
-    justifyContent: 'space-evenly',
-};
 
-const h2 = {
-    display: 'flex',
-    justifyContent: 'center'
-}
 
 
 
 const contractor = () => {
     return (
         <div>
-            <div style={h2}>
+            <div className={styles.h2}>
             <h2>Contractor</h2>
             </div>
-            <div style={link_style}>
-                <Link><button>Map</button></Link>
-                <Link to="/con_road_list"><button>Road List</button></Link>
-                <Link to="/con_profile"><button>Profile</button></Link>
+            <div className={styles.link_style}>
+                <Link><button className={styles.btn}>Map</button></Link>
+                <Link to="/con_road_list"><button className={styles.btn}>Road List</button></Link>
+                <Link to="/con_add_road"><button className={styles.btn}>Add Road</button></Link>
+                <Link to="/con_profile"><button className={styles.btn}>Profile</button></Link>
 
             </div>
         </div>

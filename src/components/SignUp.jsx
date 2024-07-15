@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useAuth } from "./AuthContext";
 import { Form } from "react-router-dom";
+import styles from "./Sign.module.css"
+import { Link } from "react-router-dom";
 
 
 
@@ -21,28 +23,37 @@ const SignUp = () => {
     };
 
     return(
-        <div>
-            <Form onSubmit={handleSignUp}>
+        <div className={styles.div}>
+            <Form onSubmit={handleSignUp} className={styles.loginForm}>
+           <div className={styles.loginContain}>
+                  <p className={styles.heading}>Sign Up</p>
                 <label>
-                    Email:
+                  Email:
                     <input 
                     type="email.."
-                    placeholder="Email.."
                     value={email}
+                    placeholder="Email.."
                     onChange={(e) => setEmail(e.target.value)} 
-                    className="sign-up"/>
+                    className={styles.sign}/>
                 </label>
                 <label>
-                    Password:
-                    <input 
+                  Password:
+                    <input
                     type="password" 
-                    placeholder="Password.."
                     value={password}
+                    placeholder="Password.."
                     onChange={(e) => setPassword(e.target.value)} 
-                    className="sign-up"/>
+                    className={styles.sign}/>
                 </label>
-                <button type="submit">Sign Up</button>
+                <button type="submit" className={styles.button}>Sign Up</button>
+           </div>
             </Form>
+           <div className={styles.alreadyHaveAccount}>
+           <label className={styles.labelText}>
+                already have an account:
+           </label>
+                <Link to="/sign_in"><button className={styles.button}>Sign In</button></Link>
+           </div>
         </div>
     )
 }

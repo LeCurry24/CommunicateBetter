@@ -1,31 +1,22 @@
-
-
-const profile_style = {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: '85%',
-    
-}
-const box_style = {
-    borderColor: 'blue',
-    border: 'solid 2px',
-    height: '400px',
-    width: '300px',
-    borderRadius: '10px'
-}
+import styles from "./BtnAndProfile.module.css"
 
 
 
-const profile = () => {
-    return (
-        <div style={profile_style} >
-            <div style={box_style}>
-            <p>profile will go here</p>
-            <button>follow</button>
-            </div>
-            
+
+const con_profile = () => {
+  return (
+    <div className={styles.div}>
+      <div className={styles.card}>
+        <div className={styles.header}>
+          <div className={styles.image}></div>
+          <div>
+            <p className={styles.name}>John Doe</p>
+          </div>
         </div>
-    )
+        <p>Road Master</p>
+        <button className={styles.button}>Follow</button>
+      </div>
+    </div>
+  );
 };
-export default profile
+export default con_profile;

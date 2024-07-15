@@ -2,6 +2,8 @@ import { Form } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import { useAuth } from "./AuthContext";
 import { useNavigate } from "react-router-dom";
+import styles from "./Sign.module.css"
+import { Link } from "react-router-dom";
 
 const sign_in = () => {
   const [email, setEmail] = useState("");
@@ -27,26 +29,35 @@ const sign_in = () => {
 
 
     return (
-        <div>
-            <Form onSubmit={handleSignIn}>
-                <label>
-                    Email:
-                    <input type="email"
-                    placeholder="Email.."
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)} 
-                    className="sign-in"/>
+    <div className={styles.div}>
+                <Form onSubmit={handleSignIn} className={styles.loginForm}>
+                    <div className={styles.loginContain}>
+                    <p className={styles.heading}>Sign In</p>
+                        <label>
+                            Email:
+                            <input type="email"
+                            value={email}
+                            placeholder="Email.."
+                            onChange={(e) => setEmail(e.target.value)} 
+                            className={styles.sign}/>
+                        </label>
+                        <label>
+                            Password:
+                            <input type="password"
+                            value={password}
+                            placeholder="Password..."
+                            onChange={(e) => setPassword(e.target.value)}
+                            className={styles.sign} />
+                        </label>
+                        <button type="submit" className={styles.button}>Sign In</button>
+                    </div>
+                </Form>
+            <div className={styles.alreadyHaveAccount}>
+                <label className={styles.labelText}>
+                        don't have an account:
                 </label>
-                <label>
-                    Password:
-                    <input type="password"
-                    placeholder="Password.."
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    className="sign-in" />
-                </label>
-                <button type="submit">Sign In</button>
-            </Form>
+                        <Link to="/sign_up"><button className={styles.button}>Sign up</button></Link>
+            </div>
         </div>
     );
 };

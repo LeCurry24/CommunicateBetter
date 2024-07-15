@@ -1,34 +1,26 @@
 import { Outlet, Link } from "react-router-dom"
+import styles from "./Layout.module.css"
 
-const styles = {
-    boxShadow: '0 0 15px black',
-    backgroundColor: 'rgba(0, 0, 0, 0.8)', 
-    borderRadius: '15px',
-    width: '85%',
-    height: '90%' 
-}
 
-const new_style = {
-    display: 'flex',
-    justifyContent: 'space-evenly',
-    
-}
 
 
 
 const Layout = () => {
     return(
-        <div style={styles}>
-            <div style={new_style}>
-                <Link to="/"><button>home</button></Link>
-                <Link to="/sign_in"><button>Sign In</button></Link>
-                <Link to="/sign_up"><button>Sign Up</button></Link>
-                <Link to="/sign_out"><button>Sign out</button></Link>
-                <Link to="/road_master"><button>Road Master</button></Link>
-                <Link to="/contractor"><button>Contractor</button></Link>
+        <>
+        <div className={styles.layout}>
+            <div className={styles.btnLayout}>
+                <Link to="/"><button className={styles.btn}>home</button></Link>
+                <Link to="/sign_in"><button className={styles.btn}>Sign In</button></Link>
+                <Link to="/sign_up"><button className={styles.btn}>Sign Up</button></Link>
+                <Link to="/sign_out"><button className={styles.btn}>Sign out</button></Link>
+                <Link to="/road_master"><button className={styles.btn}>Road Master</button></Link>
+                <Link to="/contractor"><button className={styles.btn}>Contractor</button></Link>
             </div>
             <Outlet/>
         </div>
+        
+        </>
     )
 }
 export default Layout

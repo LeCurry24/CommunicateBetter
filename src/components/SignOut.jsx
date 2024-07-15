@@ -1,6 +1,7 @@
 import React from "react";
 import { useAuth } from "./AuthContext";
 import { useNavigate } from "react-router-dom";
+import styles from "./Signout.module.css"
 
 
 
@@ -20,7 +21,7 @@ const sign_out = () => {
 
 
     return (
-        <button onClick={handleSignOut}>
+        <button onClick={handleSignOut} className={styles.btn} >
             Sign Out
         </button>
     )
