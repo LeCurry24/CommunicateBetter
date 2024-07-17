@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { supabase } from "../supabaseConfig";
 import RoadCard from "../components/RoadCard";
+import { Link } from "react-router-dom";
+import styles from "./BtnAndProfile.module.css"
 
 
 const con_btn_style = {
@@ -16,6 +18,7 @@ const con_btn_style = {
 const con_road_list = () => {
     const [fetchError, setFetchError] = useState(null)
     const [Roads, setRoads] = useState(null)
+
 
     useEffect(() => {
         const fetchRoads = async () => {
@@ -39,6 +42,7 @@ const con_road_list = () => {
     }, [])
     return (
         <>
+        <Link to="/con_add_road"><button className={styles.btn}>Add Road</button></Link>
             <div style={con_btn_style}>
                 <p>Road List</p>
             </div>

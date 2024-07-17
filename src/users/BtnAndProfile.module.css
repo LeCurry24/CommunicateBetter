@@ -1,3 +1,11 @@
+.div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+
 .link_style{
     display: flex;
     justify-content: space-evenly;
@@ -40,9 +48,9 @@
 
 
 /* card styling */
-.div{
+.profile_div{
     display: flex;
-    justify-content: center;
+    
     align-items: center;
     height: 50vh;
 }
@@ -50,6 +58,7 @@
 .card {
     background-color: rgba(243, 244, 246, 1);
     padding: 2rem;
+    width: 100rem;
     max-width: 320px;
     border-radius: 10px;
     box-shadow: 0 20px 30px -20px rgba(5, 5, 5, 0.24);

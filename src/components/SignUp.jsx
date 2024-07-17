@@ -51,7 +51,7 @@ const SignUp = () => {
             </Form>
            <div className={styles.alreadyHaveAccount}>
            <label className={styles.labelText}>
-                already have an account:
+                have an account:
            </label>
                 <Link to="/sign_in"><button className={styles.button}>Sign In</button></Link>
            </div>

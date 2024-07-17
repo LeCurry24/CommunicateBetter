@@ -1,3 +1,11 @@
+.formDiv{
+    display: flex;
+    align-items: center;
+    
+    
+}
+
+
 .label{
     color: white;
 }

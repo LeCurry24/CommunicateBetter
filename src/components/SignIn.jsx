@@ -51,13 +51,11 @@ const sign_in = () => {
                         </label>
                         <button type="submit" className={styles.button}>Sign In</button>
                     </div>
+                        <label className={styles.labelText}>
+                                don't have an account:
+                        </label>
+                                <Link to="/sign_up"><button className={styles.button}>Sign up</button></Link>
                 </Form>
-            <div className={styles.alreadyHaveAccount}>
-                <label className={styles.labelText}>
-                        don't have an account:
-                </label>
-                        <Link to="/sign_up"><button className={styles.button}>Sign up</button></Link>
-            </div>
         </div>
     );
 };

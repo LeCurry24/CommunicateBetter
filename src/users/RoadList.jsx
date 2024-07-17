@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { supabase } from "../supabaseConfig";
 import RoadCard from "../components/RoadCard";
+import { Link } from "react-router-dom";
+import styles from "./BtnAndProfile.module.css"
 
 
 const btn_style = {
@@ -40,9 +42,10 @@ const road_list = () => {
             <div style={btn_style}>
                 <p>Road List</p>
             </div>
+            <Link to="/add_road"><button className={styles.btn}>Add Road</button></Link>
             {fetchError &&(<p>{fetchError}</p>)}
             {Roads && (
-                <div>
+                <div style={{"overflow": "scroll"}}>
                     {Roads.map(Roads => (
                         <RoadCard key={Roads.id} Roads={Roads}/>
                     ))}

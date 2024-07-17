@@ -5,7 +5,7 @@ import styles from "./BtnAndProfile.module.css"
 
 const con_profile = () => {
   return (
-    <div className={styles.div}>
+    <div className={styles.profile_div}>
       <div className={styles.card}>
         <div className={styles.header}>
           <div className={styles.image}></div>

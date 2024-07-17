@@ -13,6 +13,7 @@ import Contractors from "./users/Contractors"
 import ConProfile from "./users/ConProfile"
 import ConRoadList from "./users/ConRoadList"
 import ConAddRoad from "./users/ConAddRoad"
+import AddJobs from "./users/AddJobs"
 import { AuthProvider } from "./components/AuthContext";
 
 
@@ -69,6 +70,10 @@ const router = createBrowserRouter([
       {
         path: "/con_add_road",
         element: <ConAddRoad/>
+      },
+      {
+        path: "/add_job",
+        element: <AddJobs/>
       }
     ]
   }

@@ -1,27 +1,21 @@
 .div{
-    /* border: 5px solid white; */
     /* background-color: rgba(255, 255, 255, 0.758); */
-    /* opacity: 60%; */
-    /* width: 60%;
-    height: 60%; */
     border-radius: 10%;
-    display: flex;
-    
     align-items: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    justify-content: space-between;
+    
    
 }
 
-.alreadyHaveAccount{
-    margin-right: 220px;
-}
 
 .labelText{
     font-size: 150%;
+    
+
+   
 }
 
 
@@ -45,7 +39,7 @@ label{
 
 
 .loginContain{
-    margin-left: 180px;
+    /* margin-left: 180px; */
     position: relative;
     display: flex;
     flex-direction: column;
@@ -71,6 +65,8 @@ label{
     box-shadow: 13px 13px 100px #ffffff,
                -13px -13px 100px #b2b2b2;
   }
+
+/* button css */
 
 .button {
     font-size: 18px;

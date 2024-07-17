@@ -4,19 +4,27 @@
     width: 85%;
     height: 90%;
     background-color: rgba(0, 0, 0, 70%);
+    display: flex;
 }
+
+@media screen and (max-width: 450px) {
+    .layout{
+        display: flex;
+        flex-direction: column;
+    }
+
+} 
 
 .nav{
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
-    align-items: start;
+    
 
     ul{
        
         flex-direction: column;
         width: 100%;
-        margin-bottom: o.25rem;
+        margin-bottom: 0.25rem;
 
 
         li{
@@ -54,7 +62,10 @@
 
 .btnLayout {
     padding: 2%;
-    
+    display: flex;
+    background-color: rgb(0, 105, 132);
+    border-radius: 10px;
+    z-index: 5;
     
 }
 

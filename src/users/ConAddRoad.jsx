@@ -38,7 +38,7 @@ const con_add_road = () => {
     }
 
     return (
-        <div>
+        <div className={styles.formDiv}>
             <form onSubmit={handleSubmit}>
                 <label>
                     address:

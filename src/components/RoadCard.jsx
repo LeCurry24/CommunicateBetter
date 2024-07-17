@@ -10,8 +10,8 @@ const RoadCard = ({ Roads }) => {
                     <p>{Roads.note}</p>
                     <button>Preset</button>
                     <button>Preset standby</button>
-                    <button>Close</button>
-            </div>   
+                    <button>Close</button>  
+            </div>
     )
 };
 export default RoadCard
