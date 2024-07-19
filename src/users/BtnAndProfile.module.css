@@ -6,6 +6,31 @@
 }
 
 
+.textBtn{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+.scrollDiv{
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: row;
+}
+
+.scrollDiv:hover {
+    font-size: 200px;
+}
+
+@media screen and (max-width: 450px) {
+  .scrollDiv{
+    display: flex;
+    flex-direction: column;
+  }
+  
+}
+
 .link_style{
     display: flex;
     justify-content: space-evenly;

@@ -3,8 +3,7 @@ import Home from "./components/Home";
 import ErrorPage from "./pages/ErrorPage";
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
-import SignOut from "./components/SignOut";
-import Layout from "./pages/Layout";
+import Layout from "./components/Layout";
 import RoadMaster from "./users/RoadMaster";
 import Profile from "./users/Profile";
 import RoadList from "./users/RoadList";
@@ -15,6 +14,7 @@ import ConRoadList from "./users/ConRoadList"
 import ConAddRoad from "./users/ConAddRoad"
 import AddJobs from "./users/AddJobs"
 import { AuthProvider } from "./components/AuthContext";
+import JobsList from "./users/JobsList";
 
 
 
@@ -34,10 +34,6 @@ const router = createBrowserRouter([
       {
         path: "/sign_up",
         element: <SignUp/>
-      },
-      {
-        path: "/sign_out",
-        element: <SignOut/>
       },
       {
         path: "/road_master",
@@ -74,6 +70,10 @@ const router = createBrowserRouter([
       {
         path: "/add_job",
         element: <AddJobs/>
+      },
+      {
+        path: "/jobslist",
+        element: <JobsList/>
       }
     ]
   }

@@ -12,9 +12,8 @@ const road_master = () => {
             <div className={styles.link_style}>
                 <Link><button className={styles.btn}>Map</button></Link>
                 <Link to="/road_list"><button className={styles.btn}>Road List</button></Link>
-                <Link to="/add_job"><button className={styles.btn}>New Job</button></Link>
+                <Link to="/JobsList"><button className={styles.btn}>Jobs History</button></Link>
                 <Link to="/profile"><button className={styles.btn}>Profile</button></Link>
-
             </div>
         </div>
     )

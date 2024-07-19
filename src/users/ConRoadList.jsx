@@ -15,7 +15,7 @@ const con_btn_style = {
 
 
 
-const con_road_list = () => {
+const ConRoadList = () => {
     const [fetchError, setFetchError] = useState(null)
     const [Roads, setRoads] = useState(null)
 
@@ -42,13 +42,15 @@ const con_road_list = () => {
     }, [])
     return (
         <>
-        <Link to="/con_add_road"><button className={styles.btn}>Add Road</button></Link>
-            <div style={con_btn_style}>
-                <p>Road List</p>
+            <div className={styles.textBtn}>
+                <div style={con_btn_style}>
+                    <p>Road List</p>
+                </div>
+            <Link to="/con_add_road"><button className={styles.btn}>Add Road</button></Link>
             </div>
             {fetchError &&(<p>{fetchError}</p>)}
             {Roads && (
-                <div>
+                <div className={styles.scrollDiv}>
                     {Roads.map(Roads => (
                         <RoadCard key={Roads.id} Roads={Roads}/>
                     ))}
@@ -57,4 +59,4 @@ const con_road_list = () => {
         </>
     )
 };
-export default con_road_list
+export default ConRoadList
