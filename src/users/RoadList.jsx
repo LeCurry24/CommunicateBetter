@@ -43,7 +43,8 @@ const RoadList = () => {
                 <div style={btn_style}>
                     <p>Road List</p>
                 </div>
-                <Link to="/add_road"><button className={styles.btn}>Add Road</button></Link>
+                <Link to="/JobsList"><button className={styles.ajButton}>Jobs History</button></Link>
+                <Link to="/add_road"><button className={styles.ajButton}>Add Road</button></Link>
             </div>
             {fetchError &&(<p>{fetchError}</p>)}
             {Roads && (

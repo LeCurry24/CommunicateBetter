@@ -5,6 +5,7 @@ import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 import Layout from "./components/Layout";
 import RoadMaster from "./users/RoadMaster";
+import Map from "./users/Map";
 import Profile from "./users/Profile";
 import RoadList from "./users/RoadList";
 import AddRoad from "./users/AddRoad"
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: "/road_master",
         element: <RoadMaster/>
+      },
+      {
+        path: "/map",
+        element: <Map/>
       },
       {
         path: "/profile",

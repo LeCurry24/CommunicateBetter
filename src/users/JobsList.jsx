@@ -33,7 +33,7 @@ const JobsList = () => {
         <div>
             Jobs History
         </div>
-        <Link to="/add_job"><button className={styles.btn}>New Job</button></Link>
+        <Link to="/add_job"><button className={styles.ajButton}>New Job</button></Link>
         </div>
         {fetchError &&(<p>{fetchError}</p>)}
         {NewJobs && (

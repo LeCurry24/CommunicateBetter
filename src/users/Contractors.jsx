@@ -13,7 +13,7 @@ const contractor = () => {
             <h2>Contractor</h2>
             </div>
             <div className={styles.link_style}>
-                <Link><button className={styles.btn}>Map</button></Link>
+                <Link to="/map"><button className={styles.btn}>Map</button></Link>
                 <Link to="/con_road_list"><button className={styles.btn}>Road List</button></Link>
                 <Link to="/con_profile"><button className={styles.btn}>Profile</button></Link>
 

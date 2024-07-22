@@ -9,8 +9,8 @@ const RoadCard = ({ Roads }) => {
                     <p>{Roads.date}</p>
                     <p>{Roads.note}</p>
                     <button>Preset</button>
-                    <button>Preset standby</button>
-                    <button>Close</button>  
+                    <button>Close</button>
+                    <button>delete</button> 
             </div>
     )
 };

@@ -12,3 +12,15 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.leaflet-container {
+  width: 100vw;
+  height: 90vh;
+}
+
+@media screen and (max-width: 450px) {
+  .leaflet-container{
+    width: 90vw;
+  }
+  
+}

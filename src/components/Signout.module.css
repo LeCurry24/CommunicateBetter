@@ -1,0 +1,26 @@
+.btn{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    border: none;
+    background: none;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn::before{
+    margin-left: auto;
+}
+
+.btn::after, .btn::before{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #0d81d4;
+    display: block;
+    transition: 0.5s;
+}
+
+.btn:hover::after, .btn:hover::before{
+    width: 100%;
+}

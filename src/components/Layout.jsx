@@ -4,14 +4,10 @@ import React,{useState} from "react";
 import { useAuth } from "./AuthContext";
 import { useNavigate } from "react-router-dom";
 
-
-
-
 const Layout = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const { signOut } = useAuth();
     const navigate = useNavigate();
-
 
     const handleSignOut = async () => {
       const { error } = await signOut();
