@@ -7,6 +7,7 @@ const JobCard = ({ NewJobs }) => {
             <p>{NewJobs.state}</p>
             <p>{NewJobs.city}</p>
             <p>{NewJobs.date}</p>
+            <button>Edit</button>
             <button>delete</button>
         </div>
     )

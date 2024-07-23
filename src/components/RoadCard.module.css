@@ -23,6 +23,32 @@
   
   }
 
+  .cardBtn{
+    display: flex;
+    
+  }
+
+  .closeBtn{
+    position: absolute;
+    left: 90%;
+    top: 80%;
+  }
+
+  .editBtn{
+    position: absolute;
+    right: 87%;
+    top: 80%;
+  }
+
+}
+
+@media screen and (max-width: 450px) {
+  .cardBtn{
+    display: flex;
+    flex-direction: column;
+  }
+
+  
 }
 
 

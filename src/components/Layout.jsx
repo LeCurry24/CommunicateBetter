@@ -35,7 +35,7 @@ const Layout = () => {
               <ul>
                 <li>
                     <Link to="/">
-                        <button className={styles.btn}>home</button>
+                        <button className={styles.btn}>Home</button>
                     </Link>
                 </li>
                 <li>

@@ -15,12 +15,8 @@
 
 .scrollDiv{
     overflow-y: scroll;
-    display: flex;
-    flex-direction: row;
-}
-
-.scrollDiv:hover {
-    font-size: 200px;
+    display: ruby;
+    
 }
 
 @media screen and (max-width: 450px) {
