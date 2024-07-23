@@ -31,6 +31,7 @@ const add_job = () => {
         }
     }
     return (
+    <div className={styles.formDiv}>
        <form onSubmit={handleSubmit}>
             <label>
                 State:
@@ -60,6 +61,7 @@ const add_job = () => {
 
             {formError && <p className="error">{formError}</p>}
        </form>
+    </div>
     )
 };
 

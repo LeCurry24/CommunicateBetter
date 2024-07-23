@@ -75,15 +75,23 @@
 /* profile card styling */
 .profile_div{
     display: flex;
-    
+    margin-right: 34%;
     align-items: center;
-    height: 50vh;
+}
+
+@media screen and (max-width: 450px) {
+  .profile_div{
+    height: 80%;
+    margin: 0;
+    justify-content: center;
+  }
+  
 }
 
 .card {
     background-color: rgba(243, 244, 246, 1);
     padding: 2rem;
-    width: 100rem;
+    width: 15rem;
     max-width: 320px;
     border-radius: 10px;
     box-shadow: 0 20px 30px -20px rgba(5, 5, 5, 0.24);

@@ -1,8 +1,18 @@
 .formDiv{
     display: flex;
     align-items: center;
+    margin-right: 40%;
     
-    
+
+}
+
+@media screen and (max-width: 450px) {
+  .formDiv {
+    justify-content: center;
+    height: 100%;
+    margin: 0;
+  }
+  
 }
 
 

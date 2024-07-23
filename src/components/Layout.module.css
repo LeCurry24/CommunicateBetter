@@ -6,12 +6,14 @@
     background-color: rgba(0, 0, 0, 70%);
     backdrop-filter: blur(5px);
     display: flex;
+    justify-content: space-between;
 }
 
 @media screen and (max-width: 450px) {
     .layout{
         display: flex;
         flex-direction: column;
+        justify-content: start;
     }
 
 } 
@@ -108,6 +110,21 @@
 
 .btn:hover::after, .btn:hover::before{
     width: 100%;
+}
+
+
+.signOut{
+    position: absolute;
+    bottom: 16px;
+}
+
+@media screen and (max-width: 450px) {
+    .signOut{
+        position: absolute;
+        bottom: 94%;
+        left: 70%;
+    }
+    
 }
 
 

@@ -31,6 +31,7 @@ const Layout = () => {
                 <span></span>
               </div>
               {menuOpen ? 
+              <>
               <ul>
                 <li>
                     <Link to="/">
@@ -56,13 +57,11 @@ const Layout = () => {
                   <Link to="/contractor">
                     <button className={styles.btn}>Contractor</button>
                   </Link>
-                </li>
-                <li>
-                <button onClick={handleSignOut} className={styles.btn} >
+                </li> 
+              </ul> 
+                <button onClick={handleSignOut} className={`${styles.btn} ${styles.signOut}`} >
                   Sign Out
-                </button>
-                </li>
-              </ul> : null}
+                </button> </> : null}
           </nav>
         </div>
         <Outlet />
