@@ -1,4 +1,5 @@
 import { createBrowserRouter, RouterProvider,} from "react-router-dom";
+import { AuthProvider } from "./components/AuthContext";
 import Home from "./components/Home";
 import ErrorPage from "./pages/ErrorPage";
 import SignIn from "./components/SignIn";
@@ -14,7 +15,7 @@ import ConProfile from "./users/ConProfile"
 import ConRoadList from "./users/ConRoadList"
 import ConAddRoad from "./users/ConAddRoad"
 import AddJobs from "./users/AddJobs"
-import { AuthProvider } from "./components/AuthContext";
+import Update from "./users/Update"
 import JobsList from "./users/JobsList";
 
 
@@ -79,6 +80,10 @@ const router = createBrowserRouter([
       {
         path: "/jobslist",
         element: <JobsList/>
+      },
+      {
+        path: "/:id",
+        element: <Update/>
       }
     ]
   }

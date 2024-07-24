@@ -13,7 +13,7 @@ const add_road = () => {
     const [address, setAddress] = useState('')
     const [time, setTime] = useState('')
     const [date, setDate] = useState('')
-    const [note, setNate] = useState('')
+    const [note, setNote] = useState('')
     const [formError, setFormError] = useState(null)
 
     const handleSubmit = async (e) => {
@@ -72,7 +72,7 @@ const add_road = () => {
                     <input type="text"
                     placeholder="Note.." 
                     value={note}
-                    onChange={(e) => setNate(e.target.value)}
+                    onChange={(e) => setNote(e.target.value)}
                     className={styles.input}/>
                 </label>
                 <button type="submit" className={styles.btn}>Add Road</button>

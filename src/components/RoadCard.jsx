@@ -15,7 +15,7 @@ const RoadCard = ({ Roads }) => {
                     <button>Open</button>
                     </div>
                     <button className={styles.closeBtn}>X</button>
-                    <Link to={"" + Roads.id} className={styles.editBtn}><button>Edit</button></Link>
+                    <Link to={"/" + Roads.id} className={styles.editBtn}><button>Edit</button></Link>
             </div>
     )
 };
