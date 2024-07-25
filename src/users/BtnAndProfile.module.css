@@ -15,17 +15,14 @@
 
 .scrollDiv{
     overflow-y: scroll;
-    display: ruby;
+    flex-wrap: wrap;
+    flex: 1 0 320px;
+    display: flex;
+    justify-content: center;
     
 }
 
-@media screen and (max-width: 450px) {
-  .scrollDiv{
-    display: flex;
-    flex-direction: column;
-  }
-  
-}
+
 
 .link_style{
     display: flex;

@@ -4,7 +4,7 @@ import { supabase } from "../supabaseConfig"
 import styles from "./AddForms.module.css"
 
 
-const update = () => {
+const Update = () => {
     const { id } = useParams()
     const navigate = useNavigate()
 
@@ -18,17 +18,17 @@ const update = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
 
-
-        if(!address || !time || !date) {
+       
+        if(!address || !time) {
             setFormError('please fill all of the top three fields correctly')
             return
         }
-
+        console.log(handleSubmit)
         const { data, error } = await supabase
             .from('Roads')
             .update({address, time, date, note})
             .eq('id', id)
-            .select
+            .select();
 
         if (error){
             setFormError('please fill all of the top three fields correctly')
@@ -38,6 +38,7 @@ const update = () => {
             navigate('/add_road')
         }
     }
+    
 
     useEffect(() => {
         const fetchRoads = async () => {
@@ -54,7 +55,9 @@ const update = () => {
             setAddress(data.address)
             setTime(data.time)
             setDate(data.date)
-            setNote(data.note)
+            if (data.note){
+                setNote(data.note)
+            }
             
         }
         }
@@ -106,4 +109,4 @@ const update = () => {
     </div>
     )
 }
-export default update
+export default Update
