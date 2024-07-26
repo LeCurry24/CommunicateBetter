@@ -1,24 +1,24 @@
 import { Outlet, Link } from "react-router-dom";
 import styles from "./Layout.module.css";
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { useAuth } from "./AuthContext";
 import { useNavigate } from "react-router-dom";
 
 const Layout = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
-    const { signOut } = useAuth();
-    const navigate = useNavigate();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const { signOut, session } = useAuth();
+  const navigate = useNavigate();
 
-    const handleSignOut = async () => {
-      const { error } = await signOut();
-      if (error) {
-        alert(error.message);
-      } else {
-        navigate("/sign_in");
-      }
-    };
+  const handleSignOut = async () => {
+    const { error } = await signOut();
+    if (error) {
+      alert(error.message);
+    } else {
+      navigate("/sign_in");
+    }
+  };
 
-    const showContent = () => setMenuOpen(!menuOpen)
+  const showContent = () => setMenuOpen(!menuOpen);
 
   return (
     <>
@@ -26,42 +26,49 @@ const Layout = () => {
         <div className={styles.btnLayout}>
           <nav className={styles.nav}>
             <div className={styles.menu} onClick={showContent}>
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-              {menuOpen ? 
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            {menuOpen ? (
               <>
-              <ul>
-                <li>
+                <ul>
+                  <li>
                     <Link to="/">
-                        <button className={styles.btn}>Home</button>
+                      <button className={styles.btn}>Home</button>
                     </Link>
-                </li>
-                <li>
-                  <Link to="/sign_in">
-                    <button className={styles.btn}>Sign In</button>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/sign_up">
-                    <button className={styles.btn}>Sign Up</button>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/road_master">
-                    <button className={styles.btn}>Road Master</button>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/contractor">
-                    <button className={styles.btn}>Contractor</button>
-                  </Link>
-                </li> 
-              </ul> 
-                <button onClick={handleSignOut} className={`${styles.btn} ${styles.signOut}`} >
-                  Sign Out
-                </button> </> : null}
+                  </li>
+                  <li>
+                    <Link to="/sign_in">
+                      <button className={styles.btn}>Sign In</button>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/sign_up">
+                      <button className={styles.btn}>Sign Up</button>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/road_master">
+                      <button className={styles.btn}>Road Master</button>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/contractor">
+                      <button className={styles.btn}>Contractor</button>
+                    </Link>
+                  </li>
+                </ul>
+                {session && (
+                  <button
+                    onClick={handleSignOut}
+                    className={`${styles.btn} ${styles.signOut}`}
+                  >
+                    Sign Out
+                  </button>
+                )}
+              </>
+            ) : null}
           </nav>
         </div>
         <Outlet />
