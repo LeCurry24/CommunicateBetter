@@ -1,13 +1,14 @@
 import { Form } from "react-router-dom";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useAuth } from "./AuthContext";
 import { useNavigate } from "react-router-dom";
-import styles from "./Sign.module.css"
+import styles from "./Sign.module.css";
 import { Link } from "react-router-dom";
 
-const sign_in = () => {
+const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [role, setRole] = useState("contractor");
   const { signIn, session } = useAuth();
   const navigate = useNavigate();
 
@@ -17,7 +18,7 @@ const sign_in = () => {
     if (error) {
       alert(error.message);
     } else {
-      navigate("/");
+      navigate(`/${role}`);
     }
   };
 
@@ -28,7 +29,7 @@ const sign_in = () => {
   }, [session, navigate]);
 
 
-    return (
+  return (
     <div className={styles.div}>
                 <Form onSubmit={handleSignIn} className={styles.loginForm}>
                     <div className={styles.loginContain}>
@@ -49,6 +50,14 @@ const sign_in = () => {
                             onChange={(e) => setPassword(e.target.value)}
                             className={styles.sign} />
                         </label>
+                        <label>
+                            Choose an role:
+                            <select value={role} onChange={(e) => setRole(e.target.value)} className={styles.sign}>
+                            <option>--</option>
+                            <option value="road_master">Roadmaster</option>
+                            <option value="contractor">Contractor</option>
+                            </select>
+                        </label>
                         <button type="submit" className={styles.button}>Sign In</button>
                     </div>
                         <label className={styles.labelText}>
@@ -59,4 +68,4 @@ const sign_in = () => {
         </div>
     );
 };
-export default sign_in
+export default SignIn

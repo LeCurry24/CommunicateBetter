@@ -53,7 +53,9 @@ const Update = () => {
         }
         if (data){
             setAddress(data.address)
-            setTime(data.time)
+            if (data.time){
+                setTime(data.time)
+            }
             setDate(data.date)
             if (data.note){
                 setNote(data.note)
