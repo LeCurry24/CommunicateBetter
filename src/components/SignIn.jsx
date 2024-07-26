@@ -53,7 +53,6 @@ const SignIn = () => {
                         <label>
                             Choose an role:
                             <select value={role} onChange={(e) => setRole(e.target.value)} className={styles.sign}>
-                            <option>--</option>
                             <option value="road_master">Roadmaster</option>
                             <option value="contractor">Contractor</option>
                             </select>

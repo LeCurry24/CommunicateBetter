@@ -14,7 +14,7 @@ const con_profile = () => {
           </div>
         </div>
         <p>Contractor</p>
-        <button className={styles.button}>Follow</button>
+        {/* <button className={styles.button}>Follow</button> */}
       </div>
     </div>
   );
